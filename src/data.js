@@ -27,7 +27,7 @@ const actors = [
   },
   {
     name: "Anna Kendrick",
-    movies: ["Pitch Perfect", "Into The Wood"],
+    movies: ["Pitch Perfect", "Into The Wood","Twilight"],
   },
   {
     name: "Tom Cruise",

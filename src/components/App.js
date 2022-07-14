@@ -5,9 +5,33 @@ import Home from "./Home";
 import Actors from "./Actors";
 import Directors from "./Directors";
 import Movies from "./Movies";
+import Banner from "./Banner";
 
 function App() {
-  return <div>{/*{code here}*/}</div>;
+
+  const appStyle = {
+    borderStyle: 'outset'
+  }
+  return(
+    <div style={appStyle} >
+      <Banner />
+      <NavBar />
+     <Switch>
+        <Route exact path='/'>
+          <Home />
+        </Route>
+        <Route path='/movies'>
+          <Movies />
+        </Route>
+        <Route path='/directors'>
+          <Directors />
+        </Route>
+        <Route path='/actors'>
+          <Actors />
+        </Route>
+     </Switch>
+    </div>
+  )
 }
 
 export default App;
