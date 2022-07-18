@@ -1,37 +1,31 @@
-import React from "react";
-import { Route, Switch } from "react-router-dom";
-import NavBar from "./NavBar";
-import Home from "./Home";
-import Actors from "./Actors";
-import Directors from "./Directors";
-import Movies from "./Movies";
-import Banner from "./Banner";
+import React from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import Home from './Home'
+import Navigation from './Navigation'
+import Movies from './Movies'
+import './App.css'
 
-function App() {
-
-  const appStyle = {
-    borderStyle: 'outset'
-  }
+function App(){
   return(
-    <div style={appStyle} >
-      <Banner />
-      <NavBar />
-     <Switch>
-        <Route exact path='/'>
-          <Home />
-        </Route>
-        <Route path='/movies'>
-          <Movies />
-        </Route>
-        <Route path='/directors'>
-          <Directors />
-        </Route>
-        <Route path='/actors'>
-          <Actors />
-        </Route>
-     </Switch>
-    </div>
-  )
+
+      <Router>
+         <Navigation />
+         <div className='App'>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/movies">
+              <Movies />
+            </Route>
+          </Switch>
+        
+        </div>
+      </Router>
+    
+   )
+
+   
 }
 
-export default App;
+export default App
