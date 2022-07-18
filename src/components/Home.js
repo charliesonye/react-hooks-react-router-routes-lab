@@ -1,22 +1,13 @@
-import React from "react";
-import image from '../components/img/Movie-img.jpeg';
+import React from 'react'
 
-
-function Home() {
-  const homeImg = {
-    width:"100%",
-    height:"600px",
-  }
-
-  
-  return (
-    <div>
-   
-      <img src={image}  alt="Movie Images" style={homeImg} />
-    </div>
-  )
-  
+function Home(){
+    return(
+        <div>
+            <h1>My Movie Builder</h1>
+            <hr/>
+           
+        </div>
+    )
 }
 
-export default Home;
-        
+export default Home
